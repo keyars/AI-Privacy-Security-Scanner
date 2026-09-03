@@ -1,0 +1,9 @@
+{
+  "name": "ai-privacy-security-scanner",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"dev":"vite","build":"tsc -b && vite build","test":"vitest run","preview":"vite preview"},
+  "dependencies": {"@vitejs/plugin-react":"latest","lucide-react":"latest","react":"latest","react-dom":"latest","typescript":"latest","vite":"latest","vitest":"latest","jsdom":"latest","@testing-library/jest-dom":"latest","@testing-library/react":"latest"},
+  "devDependencies": {}
+}
