@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { AlertTriangle, ArrowUpRight, Check, ChevronRight, CircleAlert, Copy, FileCode2, FileSearch, Fingerprint, Gauge, KeyRound, LockKeyhole, Radar, ScanLine, ShieldCheck, Sparkles, Upload, UserRound, X } from 'lucide-react'
+import { useMemo, useState, type CSSProperties } from 'react'
+import { AlertTriangle, ArrowUpRight, Check, ChevronRight, CircleAlert, Copy, FileCode2, FileSearch, Fingerprint, Gauge, KeyRound, LockKeyhole, Radar, ScanLine, ShieldCheck, Sparkles, Upload, UserRound } from 'lucide-react'
 
 type Severity = 'Critical' | 'High' | 'Medium' | 'Low'
 type Finding = { id: number; title: string; severity: Severity; category: string; evidence: string; location: string; why: string; fix: string }
@@ -75,7 +75,7 @@ export default function App() {
     <main>
       <section className="hero">
         <div className="hero-copy"><p className="eyebrow"><Sparkles size={14}/> AI-assisted risk triage</p><h1>Find the signal<br/><em>before it leaks.</em></h1><p className="hero-text">Inspect source, text and documents for exposed secrets, personal data and security weaknesses — with evidence you can act on.</p></div>
-        <div className="score-orb"><div className="score-ring" style={{'--score': `${score * 3.6}deg`} as React.CSSProperties}><span>{score}</span><small>risk score</small></div><div className="scan-meta"><span>SCAN READY</span><b>{findings.length} findings</b></div></div>
+        <div className="score-orb"><div className="score-ring" style={{'--score': `${score * 3.6}deg`} as CSSProperties}><span>{score}</span><small>risk score</small></div><div className="scan-meta"><span>SCAN READY</span><b>{findings.length} findings</b></div></div>
       </section>
 
       <section className="workspace">
